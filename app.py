@@ -5,6 +5,9 @@ from Pages.teacher import TeacherPortal
 from Pages.student import StudentPortal
 import datetime
 
+if 'uni_multiverse' not in st.session_state:
+    st.session_state.uni_multiverse = {}
+    
 st.set_page_config(layout="wide", page_title="UniScheduler Pro")
 
 # --- 1. COMPACT MINUTE-BASED TIMER ---

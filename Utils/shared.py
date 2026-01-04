@@ -10,7 +10,7 @@ class SharedDB:
         return st.session_state.uni_multiverse.get(name)
 
     def register_college(self, name, password):
-        if not name or name in st.session_state.uni_multiverse:
+        if not name or name in st.session_state.get("uni_multiverse" , {}):
             return False
         st.session_state.uni_multiverse[name] = {
             "password": password,
